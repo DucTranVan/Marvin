@@ -16,8 +16,8 @@
 ### Guidelines 
 
 - Use of open source software is only allowed if having permissive licenses
-- Apply [Reactive system appoach] (https://www.reactivemanifesto.org/)
-- Apply [Microservice Architecture Pattern] (http://martinfowler.com/microservices/)
+- Apply [Reactive system appoach](https://www.reactivemanifesto.org/)
+- Apply [Microservice Architecture Pattern](http://martinfowler.com/microservices/)
 
 ### Technologies
 
