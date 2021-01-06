@@ -1,6 +1,6 @@
 # Personal financial Management
 
-** This tool is built to help you gaining an understanding of your financial situation in order to make the most of your money work for your FRIENDS in day-to-day life and in planing for the future.**
+**This tool is built to help you gaining an understanding of your financial situation in order to make the most of your money work for your FRIENDS in day-to-day life and in planing for the future.**
 
 ## Functional features
 
@@ -13,11 +13,11 @@
 
 ## Architectural Decisions
 
-### guidelines 
+### Guidelines 
 
 - Use of open source software is only allowed if having permissive licenses
 - Apply [Reactive system appoach] (https://www.reactivemanifesto.org/)
-- Apply  [Microservice Architecture Pattern](http://martinfowler.com/microservices/)
+- Apply [Microservice Architecture Pattern] (http://martinfowler.com/microservices/)
 
 ### Technologies
 
