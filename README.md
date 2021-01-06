@@ -4,6 +4,13 @@
 
 ## Functional features
 
+- Money flow tracking
+- Budgeting & Planning
+- Reporting
+- Bank Syncing
+- Transaction extraction from bill
+- Financial social forum
+
 ## Architectural Decisions
 
 ### guidelines 
