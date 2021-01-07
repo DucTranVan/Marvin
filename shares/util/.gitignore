@@ -1,5 +1,4 @@
 HELP.md
-*.md.swp
 .gradle
 build/
 !gradle/wrapper/gradle-wrapper.jar

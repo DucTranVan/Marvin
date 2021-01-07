@@ -46,7 +46,7 @@ spring init \
 --packaging=jar \
 --name=base-composite-service \
 --package-name=com.ari.services.composite.base \
---groupId=se.magnus.microservices.composite.base \
+--groupId=com.ari.services.composite.base \
 --dependencies=actuator,webflux \
 --version=1.0.0-SNAPSHOT \
 base-composite-service
