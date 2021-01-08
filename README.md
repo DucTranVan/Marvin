@@ -1,6 +1,6 @@
-# Personal financial Management
+# Ecanif
 
-**This tool is built to help you gaining an understanding of your financial situation in order to make the most of your money work for your FRIENDS in day-to-day life and in planing for the future.**
+**Ecanif is built to help you gaining an understanding of your financial situation in order to make the most of your money work for your FRIENDS in day-to-day life and in planing for the future.**
 
 ## Functional features
 
