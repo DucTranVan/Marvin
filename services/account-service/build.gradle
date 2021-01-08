@@ -4,7 +4,7 @@ plugins {
 	id 'java'
 }
 
-group = 'com.ari.services.core.account'
+group = 'com.ari.finance.core.account'
 version = '1.0.0-SNAPSHOT'
 sourceCompatibility = '1.8'
 
