@@ -12,8 +12,8 @@ public interface AccountService {
      * @return the product, if found, else null
      */
     @GetMapping(
-            value    = "/accountId/{accountIdId}",
+            value    = "/account/{accountId}",
             produces = "application/json")
-    Account getProduct(@PathVariable int accountId);
+    Account getAccount(@PathVariable int accountId);
 }
 

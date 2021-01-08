@@ -5,6 +5,8 @@ import java.util.List;
 
 public class Account {
 
+	private int accountId;
+
 	private String name;
 
 	private Date lastSeen;
@@ -12,6 +14,21 @@ public class Account {
 	private Saving saving;
 
 	private String note;
+
+	private String serviceAddress;
+
+	public Account(int accountId,  String serviceAddress) {
+		this.accountId = accountId;
+		this.serviceAddress = serviceAddress;
+	}
+
+	public int getAccountId() {
+		return accountId;
+	}
+
+	public void setAccountId(int accountId) {
+		this.accountId = accountId;
+	}
 
 	public String getName() {
 		return name;
@@ -44,4 +61,14 @@ public class Account {
 	public void setNote(String note) {
 		this.note = note;
 	}
+
+	public String getServiceAddress() {
+		return serviceAddress;
+	}
+
+	public void setServiceAddress(String serviceAddress) {
+		this.serviceAddress = serviceAddress;
+	}
+
+
 }

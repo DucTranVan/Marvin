@@ -1,7 +1,8 @@
+include ':shares:util'
+include ':shares:api'
 include ':services:account-service'
 include ':services:analytics-service'
 include ':services:notification-service'
 include ':services:base-composite-service'
-include ':shares:util'
-include ':shares:api'
+
 

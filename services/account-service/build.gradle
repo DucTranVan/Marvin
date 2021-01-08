@@ -1,8 +1,19 @@
-plugins {
-	id 'org.springframework.boot' version '2.4.1'
-	id 'io.spring.dependency-management' version '1.0.10.RELEASE'
-	id 'java'
+buildscript {
+	ext {
+		springBootVersion = '2.4.1'
+	}
+	repositories {
+		mavenCentral()
+	}
+	dependencies {
+		classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
+	}
 }
+
+apply plugin: 'java'
+apply plugin: 'eclipse'
+apply plugin: 'org.springframework.boot'
+apply plugin: 'io.spring.dependency-management'
 
 group = 'com.ari.finance.core.account'
 version = '1.0.0-SNAPSHOT'
@@ -13,6 +24,8 @@ repositories {
 }
 
 dependencies {
+	implementation project(':shares:api')
+	implementation project(':shares:util')
 	implementation 'org.springframework.boot:spring-boot-starter-actuator'
 	implementation 'org.springframework.boot:spring-boot-starter-webflux'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
@@ -22,3 +35,4 @@ dependencies {
 test {
 	useJUnitPlatform()
 }
+
