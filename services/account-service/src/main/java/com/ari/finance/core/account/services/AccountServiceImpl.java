@@ -26,7 +26,7 @@ public class AccountServiceImpl implements AccountService {
     public Account getAccount(int accountId) {
         LOG.debug("/account return the found account for accountId={}", accountId);
 
-        if (accountId < 1) throw new InvalidInputException("Invalid AccountId: " + accountId);
+        if (accountId < 1) throw new InvalidInputException("Invalid accountId: " + accountId);
 
         if (accountId == 13) throw new NotFoundException("No account found for accountId: " + accountId);
 
