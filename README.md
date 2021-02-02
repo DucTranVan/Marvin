@@ -1,6 +1,6 @@
-# Ecanif
+# Marvin
 
-**Ecanif is built to help you gaining an understanding of your financial situation in order to make the most of your money work for your FRIENDS in day-to-day life and in planing for the future.**
+**Marvin is a personal finance management software system that keeps track of your financial information and to help you make better financial decisions.**
 
 ## Functional features
 
@@ -34,8 +34,7 @@
 
 ### Data
 
-- During ETL, all categorical and ordinal fields must be indexed
-- During ETL, data must be denormalized into a star-model
+
 
  
 
