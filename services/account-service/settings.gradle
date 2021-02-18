@@ -1,1 +1,12 @@
 rootProject.name = 'account-service'
+
+include 'common'
+include 'configuration'
+
+include 'adapters:open-api'
+include 'adapters:persistence'
+
+include 'application'
+
+include 'mock-test'
+

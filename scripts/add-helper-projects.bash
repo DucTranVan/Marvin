@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-
+cd ..
 mkdir shares
 cd shares
 
