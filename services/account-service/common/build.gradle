@@ -1,8 +1,4 @@
 dependencies {
-	implementation 'org.springframework.boot:spring-boot-starter'
-	testImplementation 'org.springframework.boot:spring-boot-starter-test'
-}
-
-test {
-	useJUnitPlatform()
+	implementation 'org.springframework:spring-context'
+	implementation 'javax.validation:validation-api'
 }

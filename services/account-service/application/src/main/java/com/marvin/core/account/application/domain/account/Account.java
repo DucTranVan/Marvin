@@ -2,7 +2,7 @@ package com.marvin.core.account.application.domain.account;
 
 public class Account
 {
-    private Integer id;
+    private Integer accountId;
     private String name;
     private AccountType type;
 
@@ -17,14 +17,14 @@ public class Account
     {
     }
 
-    public Integer getId()
+    public Integer getAccountId()
     {
-        return id;
+        return accountId;
     }
 
-    public void setId(Integer id)
+    public void setAccountId(Integer accountId)
     {
-        this.id = id;
+        this.accountId = accountId;
     }
 
     public String getName()
