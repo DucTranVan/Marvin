@@ -1,5 +1,8 @@
 rootProject.name = 'account-service'
 
+includeBuild("../../shares/api")
+includeBuild("../../shares/util")
+
 include 'common'
 include 'configuration'
 

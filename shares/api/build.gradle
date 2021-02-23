@@ -16,7 +16,7 @@ plugins {
 apply plugin: 'java'
 apply plugin: 'eclipse'
 
-group = 'com.ari.finance.api'
+group = 'com.marvin.shares.api'
 version = '1.0.0-SNAPSHOT'
 sourceCompatibility = '1.8'
 

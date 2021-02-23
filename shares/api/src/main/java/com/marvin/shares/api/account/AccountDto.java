@@ -2,7 +2,7 @@ package com.marvin.shares.api.account;
 
 import java.util.Date;
 
-public class Account {
+public class AccountDto {
 
 	private int accountId;
 
@@ -16,7 +16,7 @@ public class Account {
 
 	private String serviceAddress;
 
-	public Account(int accountId,  String serviceAddress) {
+	public AccountDto(int accountId, String serviceAddress) {
 		this.accountId = accountId;
 		this.serviceAddress = serviceAddress;
 	}
