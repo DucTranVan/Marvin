@@ -25,6 +25,7 @@ public class AccountQueryController implements AccountService {
 
     private  final AccountQuery accountQuery;
 
+
     public AccountDto getAccount(int accountId) {
         LOG.debug("/account return the found account for accountId={}", accountId);
 
