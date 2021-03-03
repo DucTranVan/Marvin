@@ -1,0 +1,20 @@
+dependencies {
+	implementation project(':common')
+	implementation project(':application')
+
+	implementation('com.marvin.shares.api:api')
+	implementation('com.marvin.shares.util:util')
+
+	implementation 'org.springframework.boot:spring-boot-starter-actuator'
+	implementation 'org.springframework.boot:spring-boot-starter-webflux'
+	implementation 'junit:junit:4.12'
+	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+	testImplementation 'io.projectreactor:reactor-test'
+	compileOnly 'org.projectlombok:lombok'
+	annotationProcessor 'org.projectlombok:lombok'
+
+}
+
+test {
+	useJUnitPlatform()
+}
