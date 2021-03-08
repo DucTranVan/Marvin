@@ -7,7 +7,7 @@ import io.swagger.annotations.ApiResponses;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 
-@Api(description = "REST API for accounts  information.")
+@Api(description = "REST API for accounts information.")
 public interface AccountService {
 
     /**
