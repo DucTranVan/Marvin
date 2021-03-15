@@ -1,6 +1,6 @@
 # Marvin
 
-**Marvin is a personal finance management software system that keeps track of your financial information and to help you make better financial decisions.**
+**Marvin is a personal financial management software system that supports it's user organizing financial information to make better financial decisions.**
 
 ## Functional features
 
@@ -27,6 +27,7 @@
 
 ### Infrastructure
 
+- Apply [Infrastructure as code](https://martinfowler.com/bliki/InfrastructureAsCode.html)
 - Use K8s for Kubernetes as the container-orchestration system for automating computer application deployment, scaling, and management. 
 
 
