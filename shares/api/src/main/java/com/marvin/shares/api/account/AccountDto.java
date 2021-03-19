@@ -1,6 +1,5 @@
 package com.marvin.shares.api.account;
 
-import java.util.Date;
 
 public class AccountDto {
 
@@ -8,16 +7,14 @@ public class AccountDto {
 
 	private String name;
 
-	private Date lastSeen;
-
-	private Saving saving;
-
-	private String note;
+	private String userId;
 
 	private String serviceAddress;
 
-	public AccountDto(int accountId, String serviceAddress) {
+	public AccountDto(int accountId, String name, String userId, String serviceAddress) {
 		this.accountId = accountId;
+		this.name = name;
+		this.userId = userId;
 		this.serviceAddress = serviceAddress;
 	}
 
@@ -37,30 +34,6 @@ public class AccountDto {
 		this.name = name;
 	}
 
-	public Date getLastSeen() {
-		return lastSeen;
-	}
-
-	public void setLastSeen(Date lastSeen) {
-		this.lastSeen = lastSeen;
-	}
-
-	public Saving getSaving() {
-		return saving;
-	}
-
-	public void setSaving(Saving saving) {
-		this.saving = saving;
-	}
-
-	public String getNote() {
-		return note;
-	}
-
-	public void setNote(String note) {
-		this.note = note;
-	}
-
 	public String getServiceAddress() {
 		return serviceAddress;
 	}
@@ -69,5 +42,11 @@ public class AccountDto {
 		this.serviceAddress = serviceAddress;
 	}
 
+	public String getUserId() {
+		return userId;
+	}
 
+	public void setUserId(String userId) {
+		this.userId = userId;
+	}
 }

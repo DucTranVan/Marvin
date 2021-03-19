@@ -1,50 +1,26 @@
 package com.marvin.core.account.application.domain.account;
 
+import com.marvin.core.account.application.domain.transaction.Category;
+import com.marvin.core.account.application.domain.transaction.Transaction;
+import lombok.Data;
+
+import java.util.HashSet;
+import java.util.Set;
+
+@Data
 public class Account
 {
-    private Integer accountId;
+    private String id;
+
     private String name;
+
     private AccountType type;
 
+    private String userId;
 
-    public Account(String name, AccountType type)
-    {
-        this.name = name;
-        this.type = type;
+    Set<Category> categorySet = new HashSet<>();
+
+
+    public Account(String accountName, AccountType all) {
     }
-
-    public Account()
-    {
-    }
-
-    public Integer getAccountId()
-    {
-        return accountId;
-    }
-
-    public void setAccountId(Integer accountId)
-    {
-        this.accountId = accountId;
-    }
-
-    public String getName()
-    {
-        return name;
-    }
-
-    public void setName(String name)
-    {
-        this.name = name;
-    }
-
-    public AccountType getType()
-    {
-        return type;
-    }
-
-    public void setType(AccountType type)
-    {
-        this.type = type;
-    }
-
 }

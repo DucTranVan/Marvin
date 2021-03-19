@@ -6,6 +6,7 @@ import io.swagger.annotations.ApiResponse;
 import io.swagger.annotations.ApiResponses;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
+import reactor.core.publisher.Mono;
 
 @Api(description = "REST API for accounts information.")
 public interface AccountService {
@@ -27,6 +28,6 @@ public interface AccountService {
     @GetMapping(
             value    = "/account/{accountId}",
             produces = "application/json")
-    AccountDto getAccount(@PathVariable int accountId);
+    Mono<AccountDto> getAccount(@PathVariable int accountId);
 }
 
