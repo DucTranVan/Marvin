@@ -1,21 +1,26 @@
-package com.marvin.core.account.application.domain.transaction;
+package com.marvin.core.account.persistence;
 
+import com.marvin.core.account.application.domain.account.Account;
+import com.marvin.core.account.application.domain.transaction.Category;
+import com.marvin.core.account.application.domain.transaction.Tag;
+import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.index.IndexDirection;
+import org.springframework.data.mongodb.core.index.Indexed;
+import org.springframework.data.mongodb.core.mapping.Document;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import com.marvin.core.account.application.domain.account.Account;
-import lombok.EqualsAndHashCode;
-import lombok.RequiredArgsConstructor;
-import lombok.ToString;
+@Document(collection = "Transactions")
+public class TransactionMongoEntity {
+    @Id
+    private String id;
 
-@ToString
-@EqualsAndHashCode
-public class Transaction
-{
-    private int transID;
-
+    @Indexed(direction = IndexDirection.ASCENDING)
     private Integer amount;
+
+    @Indexed(unique = true)
+    private int transID;
 
     private Boolean isExpenditure;
 
@@ -31,9 +36,12 @@ public class Transaction
 
     private Account transferAccount;
 
-    private String serviceAddress;
+    public TransactionMongoEntity()
+    {
 
-    public Transaction(int transID, Integer amount, Boolean isExpenditure, Account account, Category category, String name, String description, List<Tag> tags, Account transferAccount, String serviceAddress) {
+    }
+
+    public TransactionMongoEntity(int transID, Integer amount, Boolean isExpenditure, Account account, Category category, String name, String description, List<Tag> tags, Account transferAccount, String serviceAddress) {
         this.transID = transID;
         this.amount = amount;
         this.isExpenditure = isExpenditure;
@@ -43,17 +51,16 @@ public class Transaction
         this.description = description;
         this.tags = tags;
         this.transferAccount = transferAccount;
-        this.serviceAddress = serviceAddress;
     }
 
-    public Integer getId()
+    public String getId()
     {
-        return this.transID;
+        return id;
     }
 
-    public void setId(Integer id)
+    public void setId(String id)
     {
-        this.transID = id;
+        this.id = id;
     }
 
     public Integer getAmount()
@@ -131,7 +138,6 @@ public class Transaction
         this.tags = tags;
     }
 
-
     public Account getTransferAccount()
     {
         return transferAccount;
@@ -142,16 +148,9 @@ public class Transaction
         this.transferAccount = transferAccount;
     }
 
-    public String getServiceAddress() {
-        return serviceAddress;
-    }
-
-    public void setServiceAddress(String serviceAddress) {
-        this.serviceAddress = serviceAddress;
-    }
-
     public boolean isTransfer()
     {
         return transferAccount != null;
     }
+
 }

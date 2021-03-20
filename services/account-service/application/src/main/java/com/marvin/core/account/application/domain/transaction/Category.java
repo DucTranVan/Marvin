@@ -1,5 +1,10 @@
 package com.marvin.core.account.application.domain.transaction;
 
+import lombok.EqualsAndHashCode;
+import lombok.ToString;
+
+@ToString
+@EqualsAndHashCode
 public class Category
 {
 
@@ -47,7 +52,5 @@ public class Category
     {
         this.type = type;
     }
-
-
 }
 

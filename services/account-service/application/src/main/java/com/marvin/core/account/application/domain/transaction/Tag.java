@@ -1,5 +1,8 @@
 package com.marvin.core.account.application.domain.transaction;
 
+import lombok.ToString;
+
+@ToString
 public class Tag
 {
 

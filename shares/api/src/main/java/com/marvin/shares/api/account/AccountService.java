@@ -15,5 +15,6 @@ public interface AccountService {
             value    = "/account/{accountId}",
             produces = "application/json")
     AccountDto getAccount(@PathVariable int accountId);
+
 }
 

@@ -46,5 +46,4 @@ public class Account
     {
         this.type = type;
     }
-
 }
