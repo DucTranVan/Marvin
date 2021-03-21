@@ -12,6 +12,8 @@ public class Account
 {
     private String id;
 
+    private int accountId;
+
     private String name;
 
     private AccountType type;
@@ -21,6 +23,4 @@ public class Account
     Set<Category> categorySet = new HashSet<>();
 
 
-    public Account(String accountName, AccountType all) {
-    }
 }

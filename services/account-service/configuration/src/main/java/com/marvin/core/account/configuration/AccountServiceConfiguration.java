@@ -1,10 +1,15 @@
 package com.marvin.core.account.configuration;
 
+import com.marvin.core.account.application.domain.account.Account;
 import com.marvin.core.account.application.port.in.AccountQuery;
+import com.marvin.core.account.application.port.out.AccountRepository;
 import com.marvin.core.account.application.service.AccountQueryService;
+import com.marvin.core.account.persistence.mongo.AccountPersistence;
+import com.marvin.core.account.persistence.mongo.SpringDataAccountRepository;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import reactor.core.publisher.Mono;
 import springfox.documentation.builders.PathSelectors;
 import springfox.documentation.service.ApiInfo;
 import springfox.documentation.service.Contact;
@@ -28,9 +33,10 @@ public class AccountServiceConfiguration {
     @Value("${api.common.contact.url}")       String apiContactUrl;
     @Value("${api.common.contact.email}")     String apiContactEmail;
 
+
     @Bean
-    AccountQuery accountQuery(){
-        return  new AccountQueryService();
+    AccountQuery accountQuery(final AccountPersistence accountPersistence){
+        return  new AccountQueryService(accountPersistence);
     }
 
 

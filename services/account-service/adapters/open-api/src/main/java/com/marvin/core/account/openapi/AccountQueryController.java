@@ -30,19 +30,27 @@ public class AccountQueryController implements AccountService {
 
     private  final  AccountMapper accountMapper;
 
-
+    @Override
     public Mono<AccountDto> getAccount(int accountId) {
         LOG.debug("/account return the found account for accountId={}", accountId);
 
         if (accountId < 1) throw new InvalidInputException("Invalid accountId: " + accountId);
 
-        if (accountId == 13) throw new NotFoundException("No account found for accountId: " + accountId);
-
-        return accountQuery.getAccount(Integer.toString(accountId))
+        return accountQuery.getAccount(accountId)
                 .switchIfEmpty(error(new NotFoundException("No account found for accountId: " + accountId)))
                 .log()
                 .map(e -> accountMapper.entityToApi(e))
                 .map(e -> {e.setServiceAddress(serviceUtil.getServiceAddress()); return e;});
+
+    }
+
+    @Override
+    public void createAccount(AccountDto body) {
+
+    }
+
+    @Override
+    public void deleteAccount(int accountId) {
 
     }
 }

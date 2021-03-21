@@ -4,5 +4,8 @@ import com.marvin.core.account.application.domain.account.Account;
 import reactor.core.publisher.Mono;
 
 public interface AccountQuery {
-    public Mono<Account> getAccount(String accountId);
+
+    public Mono<Account> getAccount(int accountId);
+
+    public  Mono<Account> saveAccount(Account account);
 }
