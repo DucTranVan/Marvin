@@ -7,5 +7,8 @@ import reactor.core.publisher.Mono;
 
 @Repository
 public interface SpringDataAccountRepository extends ReactiveMongoRepository<Account,String> {
+
     Mono<Account> findByAccountId(int accountId);
+
+    Mono<Void> deleteByAccountId(int accountId);
 }

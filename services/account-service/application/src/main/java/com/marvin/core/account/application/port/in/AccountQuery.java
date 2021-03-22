@@ -8,4 +8,6 @@ public interface AccountQuery {
     public Mono<Account> getAccount(int accountId);
 
     public  Mono<Account> saveAccount(Account account);
+
+    public Mono<Void> deleteAccount(int accountId);
 }

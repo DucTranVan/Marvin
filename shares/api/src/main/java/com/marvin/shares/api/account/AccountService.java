@@ -48,7 +48,7 @@ public interface AccountService {
     @PostMapping(
             value    = "/account",
             consumes = "application/json")
-    void createAccount(@RequestBody AccountDto body);
+    AccountDto createAccount(@RequestBody AccountDto body);
 
     /**
      * Sample usage:

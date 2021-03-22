@@ -5,7 +5,6 @@ import com.marvin.core.account.application.port.out.AccountRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Component;
-import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 
 @Component
@@ -28,5 +27,10 @@ public class AccountPersistence implements AccountRepository {
     @Override
     public Mono<Account> findById(int accountId) {
         return this.repository.findByAccountId(accountId);
+    }
+
+    @Override
+    public Mono<Void> deleteByAccountId(int accountId) {
+        return this.repository.deleteByAccountId(accountId);
     }
 }

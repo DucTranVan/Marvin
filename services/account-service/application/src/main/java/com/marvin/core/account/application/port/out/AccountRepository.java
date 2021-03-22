@@ -10,4 +10,6 @@ public interface AccountRepository {
     Mono<Account> save(Account account);
 
     Mono<Account> findById(int accountId);
+
+    Mono<Void> deleteByAccountId(int accountId);
 }

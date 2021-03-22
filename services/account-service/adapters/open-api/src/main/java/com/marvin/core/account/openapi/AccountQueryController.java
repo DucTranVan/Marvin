@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.RestController;
 import lombok.RequiredArgsConstructor;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.yaml.snakeyaml.constructor.DuplicateKeyException;
 import reactor.core.publisher.Mono;
 
 import static reactor.core.publisher.Mono.error;
@@ -45,12 +46,27 @@ public class AccountQueryController implements AccountService {
     }
 
     @Override
-    public void createAccount(AccountDto body) {
+    public AccountDto createAccount(AccountDto body) {
+        if (body.getAccountId() < 1) throw new InvalidInputException("Invalid accountId: " + body.getAccountId());
 
+        Account accountEntity = accountMapper.apiToEntity(body);
+        Mono<AccountDto> newEntity = accountQuery.saveAccount(accountEntity)
+                .log()
+                .onErrorMap(
+                        DuplicateKeyException.class,
+                        ex -> new InvalidInputException("Duplicate key, Account Id: " + body.getAccountId()))
+                .map(e -> accountMapper.entityToApi(e));
+
+        return newEntity.block();
     }
 
     @Override
     public void deleteAccount(int accountId) {
+        if (accountId < 1) throw new InvalidInputException("Invalid accountId: " + accountId);
 
+        LOG.debug("deleteAccount: tries to delete an entity with accountId: {}", accountId);
+        accountQuery.deleteAccount(accountId).block();
     }
+
+
 }

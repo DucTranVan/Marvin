@@ -21,4 +21,9 @@ public class AccountQueryService implements AccountQuery {
     public Mono<Account> saveAccount(Account account) {
         return accountRepository.save(account);
     }
+
+    @Override
+    public Mono<Void> deleteAccount(int accountId) {
+        return accountRepository.deleteByAccountId(accountId);
+    }
 }
