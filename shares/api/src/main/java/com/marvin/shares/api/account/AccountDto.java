@@ -11,6 +11,8 @@ public class AccountDto {
 
 	private String serviceAddress;
 
+	public AccountDto(){}
+
 	public AccountDto(int accountId, String name, String userId, String serviceAddress) {
 		this.accountId = accountId;
 		this.name = name;
