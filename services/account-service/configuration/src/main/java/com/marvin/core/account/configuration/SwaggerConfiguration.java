@@ -1,8 +1,5 @@
 package com.marvin.core.account.configuration;
 
-import com.marvin.core.account.application.port.in.AccountQuery;
-import com.marvin.core.account.application.port.out.AccountRepository;
-import com.marvin.core.account.application.service.AccountQueryService;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

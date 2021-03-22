@@ -16,26 +16,26 @@ api:
       description: Returns a details view of the specified account id.
       notes: |
         # Normal response
-                If the requested  id is found the method will return information regarding:
-                1. Account detail information
-                1. List of Users that own the account
-                1. List of Categories that is tailored for the account.
-                1. Service Addresses
-                (technical information regarding the addresses of the microservices that created the response)
+        If the requested  id is found the method will return information regarding:
+        1. Account detail information
+        1. List of Users that own the account
+        1. List of Categories that is tailored for the account.
+        1. Service Addresses (technical information regarding the addresses of the microservices that created the response)
 
-                # Expected partial and error responses
-                1. If no accountId information is found, a <b>404 - Not Found</b> error will be returned
-                1. In no Categories or Users are found for a account, a partial response will be returned
+        # Expected partial and error responses
+        1. If no accountId information is found, a <b>404 - Not Found</b> error will be returned
+        1. In no Categories or Users are found for a account, a partial response will be returned
 
     create-account:
       description: Creates a account.
       notes: |
         # Normal response
-        The  information posted to the API will be stored to the account service's db.
+        The information posted to the API will be stored to the account service's db.
 
         # Expected error responses
         1. If a account with the same accountId as specified in the posted information already exists,
-           an <b>422 - Unprocessable Entity</b> error with a "duplicate key" error message will be returned
+        an <b>422 - Unprocessable Entity</b> error with a "duplicate key" error message will be returned
+
     delete-account:
       description: Deletes a account
       notes: |
