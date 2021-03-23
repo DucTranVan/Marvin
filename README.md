@@ -1,34 +1,34 @@
 # Marvin
 
-**Marvin is a personal finance management software system that keeps track of your financial information and to help you make better financial decisions.**
+**Marvin is a ProductionReady used for speed up building microservices based application.
 
-## Functional features
+## Structures
 
-- Money flow tracking
-- Budgeting & Planning
-- Reporting
-- Bank Syncing "because no one likes doing data entry"
-- Transaction extraction from bill
-- Financial social forum
+- General purpose microservices 
+- An example special domain service: Personal financial Management Application.
+- Scripts describe the construction of the projects.
 
-## UI/UX 
 
-- The ability to add transactions quickly and seamlessly
-- The ability to import/sync bank and credit card statements
-- The ability to review accounts and financial status at a glance
+## Criteria
 
-### Back-end  
+- Provide general purpose microservices with basic use cases, and the facilities to extend or customize for a special domain. 
+- Provide scalable Infrastructure.
+- Expose some PoC of concrete special domain applications
 
-- Use of open source software is only allowed if having permissive licenses
-- Use Spring Boot framework and leverage it's AOP technologies
+### Application 
+
+- Use Spring Boot framework to construct application code base on the framework's AOP and IoC supports.
 - Use gRPC for communication between core services
-- Apply [Reactive system appoach](https://www.reactivemanifesto.org/)
-- Apply [Microservice Architecture Pattern](http://martinfowler.com/microservices/)
+
 
 ### Infrastructure
 
-- Use K8s for Kubernetes as the container-orchestration system for automating computer application deployment, scaling, and management. 
+- Use K8s as the container-orchestration system for automating application deployment, scaling, and management. 
 
+# Guideline:
+- [Reactive system appoach](https://www.reactivemanifesto.org/)
+- [Microservice Architecture Pattern](http://martinfowler.com/microservices/)
+- 
 
 
 
