@@ -25,10 +25,11 @@
 
 - Use K8s as the container-orchestration system for automating application deployment, scaling, and management. 
 
+
 # Guideline:
 - [Reactive system appoach](https://www.reactivemanifesto.org/)
 - [Microservice Architecture Pattern](http://martinfowler.com/microservices/)
-- 
+
 
 
 
