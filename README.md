@@ -3,7 +3,7 @@ Marvin is a ProductionReady project used for speed up building microservices bas
 
 ## Structures
 - General purpose microservices 
-- An example special domain service: Personal financial Management Application
+- An example special domain service: Personal Financial Management Application
 - Scripts describe the construction of the projects
 
 ## Criteria
