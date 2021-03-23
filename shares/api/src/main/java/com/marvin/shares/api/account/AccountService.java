@@ -48,7 +48,7 @@ public interface AccountService {
     @PostMapping(
             value    = "/account",
             consumes = "application/json")
-    AccountDto createAccount(@RequestBody AccountDto body);
+    Mono<AccountDto> createAccount(@RequestBody AccountDto body);
 
     /**
      * Sample usage:
@@ -65,6 +65,6 @@ public interface AccountService {
             @ApiResponse(code = 422, message = "Unprocessable entity, input parameters caused the processing to fail. See response message for more information.")
     })
     @DeleteMapping(value = "/account/{accountId}")
-    void deleteAccount(@PathVariable int accountId);
+    Mono<Void> deleteAccount(@PathVariable int accountId);
 }
 

@@ -46,26 +46,36 @@ public class AccountQueryController implements AccountService {
     }
 
     @Override
-    public AccountDto createAccount(AccountDto body) {
+    public Mono<AccountDto> createAccount(AccountDto body) {
+
         if (body.getAccountId() < 1) throw new InvalidInputException("Invalid accountId: " + body.getAccountId());
 
-        Account accountEntity = accountMapper.apiToEntity(body);
-        Mono<AccountDto> newEntity = accountQuery.saveAccount(accountEntity)
-                .log()
-                .onErrorMap(
-                        DuplicateKeyException.class,
-                        ex -> new InvalidInputException("Duplicate key, Account Id: " + body.getAccountId()))
-                .map(e -> accountMapper.entityToApi(e));
+        try {
 
-        return newEntity.block();
+            LOG.debug("createAccount: creates a new account entity for userId: {}", body.getUserId());
+            Account accountEntity = accountMapper.apiToEntity(body);
+            Mono<AccountDto> newEntity = accountQuery.saveAccount(accountEntity)
+                    .log()
+                    .onErrorMap(
+                            DuplicateKeyException.class,
+                            ex -> new InvalidInputException("Duplicate key, Account Id: " + body.getAccountId()))
+                    .map(e -> accountMapper.entityToApi(e));
+
+            return newEntity;
+
+
+        } catch (RuntimeException re) {
+            LOG.warn("createAccount failed: {}", re.toString());
+            throw re;
+        }
     }
 
     @Override
-    public void deleteAccount(int accountId) {
+    public Mono<Void> deleteAccount(int accountId) {
         if (accountId < 1) throw new InvalidInputException("Invalid accountId: " + accountId);
 
         LOG.debug("deleteAccount: tries to delete an entity with accountId: {}", accountId);
-        accountQuery.deleteAccount(accountId).block();
+        return accountQuery.deleteAccount(accountId);
     }
 
 

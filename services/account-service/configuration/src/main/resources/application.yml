@@ -2,7 +2,7 @@ api:
   common:
     version: 1.0.0
     title: Account services API
-    description: Open Api
+    description: Open Api for internal communiaction
     termsOfServiceUrl: Future Update
     license: Future Update
     licenseUrl: Future Update
@@ -67,3 +67,13 @@ spring.profiles: docker
 server.port: 8080
 
 spring.data.mongodb.host: mongodb
+
+
+
+
+
+
+
+
+
+

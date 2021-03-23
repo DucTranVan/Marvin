@@ -27,6 +27,8 @@
   - docker-compose down
   - docker-compose ps 
   - docker-compose logs -f
+  - docker-compose down && ./gradlew clean build && docker-compose build && docker-compose up -d
+
 
 
 
