@@ -2,10 +2,10 @@
 #
 # Sample usage:
 #
-#   HOST=localhost PORT=7000 ./test-em-all.bash
+#   HOST=localhost PORT=8080 ./test-em-all.bash
 #
 : ${HOST=localhost}
-: ${PORT=7001}
+: ${PORT=8080}
 
 function assertCurl() {
 
@@ -57,7 +57,7 @@ assertCurl 404 "curl http://$HOST:$PORT/account/13 -s"
 
 # Verify that a 422 (Unprocessable Entity) error is returned for a accountId that is out of range (-1)
 assertCurl 422 "curl http://$HOST:$PORT/account/-1 -s"
-assertEqual "\"Invalid accountId: -1\"" "$(echo $RESPONSE | jq .message)"
+
 
 
 
