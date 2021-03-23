@@ -1,7 +1,5 @@
 package com.marvin.core.account.configuration;
 
-import com.marvin.core.account.application.port.in.AccountQuery;
-import com.marvin.core.account.application.service.AccountQueryService;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -16,7 +14,7 @@ import static springfox.documentation.builders.RequestHandlerSelectors.basePacka
 import static springfox.documentation.spi.DocumentationType.SWAGGER_2;
 
 @Configuration
-public class AccountServiceConfiguration {
+public class SwaggerConfiguration {
 
     @Value("${api.common.version}")           String apiVersion;
     @Value("${api.common.title}")             String apiTitle;
@@ -27,11 +25,6 @@ public class AccountServiceConfiguration {
     @Value("${api.common.contact.name}")      String apiContactName;
     @Value("${api.common.contact.url}")       String apiContactUrl;
     @Value("${api.common.contact.email}")     String apiContactEmail;
-
-    @Bean
-    AccountQuery accountQuery(){
-        return  new AccountQueryService();
-    }
 
 
     /**
@@ -61,7 +54,6 @@ public class AccountServiceConfiguration {
                         emptyList()
                 ));
     }
-
 
 
 

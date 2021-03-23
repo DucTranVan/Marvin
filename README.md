@@ -31,12 +31,7 @@
 - Use K8s for Kubernetes as the container-orchestration system for automating computer application deployment, scaling, and management. 
 
 
-### Application
 
-- Use Flutter to develop applications for Android, iOS from a single codebase
-- Use Angular to develop Web interface
-- For standard entities, an ORM mapper is used
-- For complex queries, prepared SQL statements are used
 
 
 
