@@ -1,33 +1,26 @@
 # Marvin
-
-**Marvin is a ProductionReady used for speed up building microservices based application.
+Marvin is a ProductionReady project used for speed up building microservices based application
 
 ## Structures
-
 - General purpose microservices 
-- An example special domain service: Personal financial Management Application.
-- Scripts describe the construction of the projects.
-
+- An example special domain service: Personal Financial Management Application
+- Scripts describe the construction of the projects
 
 ## Criteria
-
-- Provide general purpose microservices with basic use cases, and the facilities to extend or customize for a special domain. 
-- Provide scalable Infrastructure.
+- Provide general purpose microservices with basic use cases, and the facilities to extend or customize for a special domain 
+- Provide scalable Infrastructure
 - Expose some PoC of concrete special domain applications
 
-### Application 
-
-- Use Spring Boot framework to construct application code base on the framework's AOP and IoC supports.
+## Application
+- Use Spring Boot framework to construct application code base on the framework's AOP and IoC supports
 - Use gRPC for communication between core services
 
 
-### Infrastructure
+## Infrastructure
+- Use K8s as the container-orchestration system for automating application deployment, scaling, and management
 
-- Use K8s as the container-orchestration system for automating application deployment, scaling, and management. 
-
-
-# Guideline:
-- [Reactive system appoach](https://www.reactivemanifesto.org/)
+## Guideline
+- [Reactive approach](https://www.reactivemanifesto.org/)
 - [Microservice Architecture Pattern](http://martinfowler.com/microservices/)
 
 
