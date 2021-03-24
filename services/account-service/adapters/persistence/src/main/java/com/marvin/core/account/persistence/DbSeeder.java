@@ -5,6 +5,9 @@ import com.marvin.core.account.application.domain.account.AccountType;
 import com.marvin.core.account.application.domain.transaction.Category;
 import com.marvin.core.account.application.domain.transaction.CategoryType;
 import com.marvin.core.account.application.domain.transaction.Tag;
+import com.marvin.core.account.persistence.Account.AccountMongoRepo;
+import com.marvin.core.account.persistence.Transaction.TransactionMongoEntity;
+import com.marvin.core.account.persistence.Transaction.TransactionMongoRepo;
 import com.marvin.shares.util.http.ServiceUtil;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
@@ -15,10 +18,12 @@ import java.util.List;
 @Component
 public class DbSeeder implements CommandLineRunner {
     private final TransactionMongoRepo transactionMongoRepo;
+    private final AccountMongoRepo accountMongoRepo;
     private final ServiceUtil serviceUtil;
 
-    public DbSeeder(TransactionMongoRepo transactionMongoRepo, ServiceUtil serviceUtil) {
+    public DbSeeder(TransactionMongoRepo transactionMongoRepo, AccountMongoRepo accountMongoRepo, ServiceUtil serviceUtil) {
         this.transactionMongoRepo = transactionMongoRepo;
+        this.accountMongoRepo = accountMongoRepo;
         this.serviceUtil = serviceUtil;
     }
 

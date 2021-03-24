@@ -1,4 +1,4 @@
-package com.marvin.core.account.persistence;
+package com.marvin.core.account.persistence.Transaction;
 
 import com.marvin.core.account.application.domain.transaction.Transaction;
 import com.marvin.shares.api.account.TransactionService;
@@ -8,8 +8,6 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RestController;
-
-import static java.util.logging.Level.FINE;
 
 @RestController
 public class TransactionPersistenceAdapter implements TransactionService {

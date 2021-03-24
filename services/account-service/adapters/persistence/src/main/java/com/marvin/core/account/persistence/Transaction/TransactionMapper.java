@@ -1,4 +1,4 @@
-package com.marvin.core.account.persistence;
+package com.marvin.core.account.persistence.Transaction;
 
 import com.marvin.core.account.application.domain.transaction.Transaction;
 import org.mapstruct.Mapper;

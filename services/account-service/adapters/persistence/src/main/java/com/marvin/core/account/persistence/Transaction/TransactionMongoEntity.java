@@ -1,9 +1,10 @@
-package com.marvin.core.account.persistence;
+package com.marvin.core.account.persistence.Transaction;
 
 import com.marvin.core.account.application.domain.account.Account;
 import com.marvin.core.account.application.domain.transaction.Category;
 import com.marvin.core.account.application.domain.transaction.Tag;
 import org.springframework.data.annotation.Id;
+import org.springframework.data.annotation.Version;
 import org.springframework.data.mongodb.core.index.IndexDirection;
 import org.springframework.data.mongodb.core.index.Indexed;
 import org.springframework.data.mongodb.core.mapping.Document;
@@ -15,6 +16,9 @@ import java.util.List;
 public class TransactionMongoEntity {
     @Id
     private String id;
+
+    @Version
+    private Integer version;
 
     @Indexed(direction = IndexDirection.ASCENDING)
     private Integer amount;
@@ -152,5 +156,4 @@ public class TransactionMongoEntity {
     {
         return transferAccount != null;
     }
-
 }
