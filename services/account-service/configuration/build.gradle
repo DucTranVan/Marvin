@@ -3,7 +3,6 @@ plugins {
 }
 
 dependencies {
-
 	compileOnly 'org.projectlombok:lombok'
 	annotationProcessor 'org.projectlombok:lombok'
 
@@ -11,9 +10,9 @@ dependencies {
 	implementation project(':application')
 	implementation project(':adapters:persistence')
 	implementation project(':adapters:open-api')
+//	implementation('com.marvin.core.account:application')
 	implementation('com.marvin.shares.api:api')
 	implementation('com.marvin.shares.util:util')
-
 	implementation 'org.springframework.boot:spring-boot-starter-actuator'
 	implementation 'org.springframework.boot:spring-boot-starter-webflux'
 	implementation 'junit:junit:4.12'

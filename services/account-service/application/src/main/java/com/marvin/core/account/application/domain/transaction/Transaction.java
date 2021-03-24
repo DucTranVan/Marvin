@@ -33,7 +33,17 @@ public class Transaction
 
     private String serviceAddress;
 
-    public Transaction(int transID, Integer amount, Boolean isExpenditure, Account account, Category category, String name, String description, List<Tag> tags, Account transferAccount, String serviceAddress) {
+    public Transaction(int transID,
+                       Integer amount,
+                       Boolean isExpenditure,
+                       Account account,
+                       Category category,
+                       String name,
+                       String description,
+                       List<Tag> tags,
+                       Account transferAccount,
+                       String serviceAddress)
+    {
         this.transID = transID;
         this.amount = amount;
         this.isExpenditure = isExpenditure;
@@ -130,7 +140,6 @@ public class Transaction
     {
         this.tags = tags;
     }
-
 
     public Account getTransferAccount()
     {

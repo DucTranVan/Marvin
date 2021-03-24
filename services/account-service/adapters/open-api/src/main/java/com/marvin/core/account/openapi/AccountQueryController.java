@@ -17,16 +17,15 @@ import org.slf4j.LoggerFactory;
 @OpenApiAdapter
 @RestController
 @RequiredArgsConstructor
-public class AccountQueryController implements AccountService {
+public class AccountQueryController {
 
     private static final Logger LOG = LoggerFactory.getLogger(AccountQueryController.class);
 
     private final ServiceUtil serviceUtil;
+    private final AccountQuery accountQuery;
 
-    private  final AccountQuery accountQuery;
 
-
-    public AccountDto getAccount(int accountId) {
+    public Account getAccount(int accountId) {
         LOG.debug("/account return the found account for accountId={}", accountId);
 
         if (accountId < 1) throw new InvalidInputException("Invalid accountId: " + accountId);
@@ -34,9 +33,9 @@ public class AccountQueryController implements AccountService {
         if (accountId == 13) throw new NotFoundException("No account found for accountId: " + accountId);
 
         Account accountEntity =  accountQuery.getAccount(accountId);
-        AccountDto accountDto = new  AccountDto(accountId, serviceUtil.getServiceAddress());
-        accountDto.setName(accountEntity.getName());
+//        AccountDto accountDto = new  AccountDto(accountId, serviceUtil.getServiceAddress());
+//        accountDto.setName(accountEntity.getName());
 
-        return  accountDto;
+        return  accountEntity;
     }
 }

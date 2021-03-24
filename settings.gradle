@@ -1,3 +1,7 @@
 includeBuild('./shares/util')
 includeBuild('./shares/api')
 includeBuild('./services/account-service')
+
+include 'shares:util'
+include 'shares:api'
+include 'services:account-service'

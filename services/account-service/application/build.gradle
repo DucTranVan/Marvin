@@ -1,5 +1,10 @@
+//group = 'com.marvin.core.account.application'
+
 dependencies {
-	implementation project(':common')
+	compile project(':common')
+
+//	implementation "com.marvin.core.account:common"
+
 	compileOnly 'org.projectlombok:lombok'
 	annotationProcessor 'org.projectlombok:lombok'
 

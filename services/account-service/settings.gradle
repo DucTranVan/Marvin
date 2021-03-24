@@ -4,9 +4,11 @@ includeBuild("../../shares/api")
 includeBuild("../../shares/util")
 
 include 'common'
+
 include 'configuration'
 
 include 'adapters:open-api'
+
 include 'adapters:persistence'
 
 include 'application'

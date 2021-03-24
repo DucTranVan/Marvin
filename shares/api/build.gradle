@@ -28,11 +28,16 @@ dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-webflux'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 	testImplementation 'io.projectreactor:reactor-test'
-	implementation('com.marvin.core.account:application')
+
+	implementation 'com.marvin.core.account:application'
+//	implementation project('account-service:application')
+//	implementation project(':application')
+
+//	compile project(":account-service:application")
 	implementation 'org.projectlombok:lombok'
 }
 
 
 dependencyManagement {
-	imports { mavenBom("org.springframework.boot:spring-boot-dependencies:${springBootVersion}") }
+	imports {mavenBom("org.springframework.boot:spring-boot-dependencies:${springBootVersion}") }
 }

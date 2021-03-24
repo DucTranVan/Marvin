@@ -24,6 +24,7 @@ ext {
 
 dependencies {
 	implementation project (':application')
+	implementation project(':common')
 	implementation 'com.marvin.shares.api:api'
 	implementation 'com.marvin.shares.util:util'
 	implementation 'org.springframework.boot:spring-boot-starter-actuator'
