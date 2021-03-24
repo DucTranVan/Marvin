@@ -16,8 +16,19 @@ public class AccountDto {
 
 	private String serviceAddress;
 
-	public AccountDto(int accountId, String serviceAddress) {
+	public AccountDto(int accountId,
+					  String name,
+					  Date lastSeen,
+					  Saving saving,
+					  String note,
+					  String serviceAddress
+	)
+	{
 		this.accountId = accountId;
+		this.name = name;
+		this.lastSeen = lastSeen;
+		this.saving = saving;
+		this.note = note;
 		this.serviceAddress = serviceAddress;
 	}
 

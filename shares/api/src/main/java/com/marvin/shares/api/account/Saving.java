@@ -14,6 +14,20 @@ public class Saving {
 
 	private Boolean capitalization;
 
+	public Saving(BigDecimal amount,
+				  Currency currency,
+				  BigDecimal interest,
+				  Boolean deposit,
+				  Boolean capitalization)
+
+	{
+		this.amount = amount;
+		this.currency = currency;
+		this.interest = interest;
+		this.deposit = deposit;
+		this.capitalization = capitalization;
+	}
+
 	public BigDecimal getAmount() {
 		return amount;
 	}

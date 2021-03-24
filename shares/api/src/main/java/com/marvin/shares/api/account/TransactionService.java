@@ -5,9 +5,9 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
-@RequestMapping("/api/v1/transaction")
+@RequestMapping("/api/v1/")
 public interface TransactionService {
-    @PostMapping
+    @PostMapping(value = "transaction/")
     public void addTransaction(@RequestBody Transaction body);
 
 //    @GetMapping("/amount/{amount}")

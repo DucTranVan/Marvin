@@ -32,6 +32,8 @@ public class TransactionDTO
 
     private Account transferAccount;
 
+    private String serviceAddress;
+
     public Boolean isExpenditure()
     {
         return isExpenditure;
