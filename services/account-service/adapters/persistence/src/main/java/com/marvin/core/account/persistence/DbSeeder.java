@@ -5,14 +5,19 @@ import com.marvin.core.account.application.domain.account.AccountType;
 import com.marvin.core.account.application.domain.transaction.Category;
 import com.marvin.core.account.application.domain.transaction.CategoryType;
 import com.marvin.core.account.application.domain.transaction.Tag;
+import com.marvin.core.account.persistence.Account.AccountMongoEntity;
 import com.marvin.core.account.persistence.Account.AccountMongoRepo;
 import com.marvin.core.account.persistence.Transaction.TransactionMongoEntity;
 import com.marvin.core.account.persistence.Transaction.TransactionMongoRepo;
+import com.marvin.shares.api.account.Currency;
+import com.marvin.shares.api.account.Saving;
 import com.marvin.shares.util.http.ServiceUtil;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
 
+import java.math.BigDecimal;
 import java.util.Arrays;
+import java.util.Date;
 import java.util.List;
 
 @Component
@@ -63,5 +68,27 @@ public class DbSeeder implements CommandLineRunner {
         //add our transactions to the database
         List<TransactionMongoEntity> trans = Arrays.asList(trans1);
         this.transactionMongoRepo.saveAll(trans);
+
+
+        AccountMongoEntity account1 = new AccountMongoEntity(
+                123,
+                "duyle",
+                new Date(),
+                new Saving(
+                        new BigDecimal("10000"),
+                        Currency.USD,
+                        new BigDecimal("5000"),
+                        true,
+                        false
+                ),
+                "Nothing",
+                this.serviceUtil.getServiceAddress()
+        );
+
+        this.accountMongoRepo.deleteAll();
+
+        //add our transactions to the database
+        List<AccountMongoEntity> accs = Arrays.asList(account1);
+        this.accountMongoRepo.saveAll(accs);
     }
 }

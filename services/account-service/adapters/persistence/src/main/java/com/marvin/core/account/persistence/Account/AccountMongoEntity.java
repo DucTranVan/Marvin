@@ -92,6 +92,5 @@ public class AccountMongoEntity {
     public void setServiceAddress(String serviceAddress) {
         this.serviceAddress = serviceAddress;
     }
-
 }
 
