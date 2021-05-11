@@ -6,6 +6,7 @@ volumes:
 
 services:
   account-service:
+    restart: always
     build: services/account-service/configuration
     mem_limit: 350m
     ports:
@@ -17,6 +18,7 @@ services:
         condition: service_healthy
 
   mongodb:
+    restart: always
     image: mongo:3.6.9
     mem_limit: 350m
     ports:
@@ -30,7 +32,9 @@ services:
 
 
   mysql:
+    restart: always
     image: mysql:5.7
+    mem_limit: 350m
     volumes:
       - mysql_data:/var/lib/mysql
     environment:
@@ -39,7 +43,9 @@ services:
       MYSQL_USER: keycloak
       MYSQL_PASSWORD: password
   keycloak:
+    restart: always
     image: quay.io/keycloak/keycloak:latest
+    mem_limit: 350m
     environment:
       DB_VENDOR: MYSQL
       DB_ADDR: mysql
@@ -51,6 +57,6 @@ services:
       # Uncomment the line below if you want to specify JDBC parameters. The parameter below is just an example, and it shouldn't be used in production without knowledge. It is highly recommended that you read the MySQL JDBC driver documentation in order to use it.
       #JDBC_PARAMS: "connectTimeout=30000"
     ports:
-      - 8080:8080
+      - 8443:8443
     depends_on:
       - mysql
