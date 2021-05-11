@@ -1,5 +1,5 @@
 # account-service
-- Handles creation, management, and retrieval of user's financial accounts.
+- Handles creation, management, and retrieval of user's financial accounts and related entity.
 - Handles creation and retrieval of transactions
 - Handles creation and retrieval of categories
 - Handles creation and retrieval of tag
@@ -21,7 +21,7 @@
   - docker logs account-service-container -f   
   - docker rm -f account-service-container  
 
-- Use docker-compose:
+- Use docker-compose to manage microservices land-scape
   - docker-compose build
   - docker-compose up -d
   - docker-compose down
@@ -33,4 +33,6 @@
 
 
 ## Noted link
-- swagger-ui: http://localhost:7001/swagger-ui/
+- http://localhost:8080/swagger-ui/ 
+- http://localhost:7001/swagger-ui/
+- http://localhost:8080/auth 
