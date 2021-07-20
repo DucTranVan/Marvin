@@ -1,8 +1,8 @@
 version: '2.1'
 
 services:
-  account-service:
-    build: account-service/configuration
+  dmp-service:
+    build: dmp-service/configuration
     mem_limit: 350m
     ports:
       - "7001:7001"

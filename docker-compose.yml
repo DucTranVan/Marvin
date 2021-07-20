@@ -5,9 +5,9 @@ volumes:
     driver: local
 
 services:
-  account-service:
+  dmp-service:
     restart: always
-    build: services/account-service/configuration
+    build: services/dmp-service/configuration
     mem_limit: 350m
     ports:
       - "7001:7001"
