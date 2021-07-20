@@ -1,19 +1,28 @@
 # Marvin
-Marvin is a ProductionReady project used for speed up building microservices based application
+Marvin is a ProductionReady project used for speed up building data management platform based application
 
-## Structures
-- General purpose microservices 
-- An example special domain service: Personal Financial Management Application
+# Start dmp service
+- Point to dmp service work dir: cd /services/dmp-service
+- Build and run container: docker-compose down && ./gradlew clean build && docker-compose build && docker-compose up -d
+- Sanity check: ./scripts/test-em-all.bash
+- Then: http://localhost:7001/swagger-ui/
+
+
+## Main Component
+- General purpose services (IAM for example)
+- Core services (DMP and related services)
+- Support services (Crawler services, Ingestion services, IoT)
 - Scripts describe the construction of the projects
+- Scripts for sanity checking
 
 ## Criteria
 - Provide general purpose microservices with basic use cases, and the facilities to extend or customize for a special domain 
 - Provide scalable Infrastructure
 - Expose some PoC of concrete special domain applications
 
-## Application
+## Application Implementation
 - Use Spring Boot framework to construct application code base on the framework's AOP and IoC supports
-- Use gRPC for communication between core services
+- Use async manner for communication between core services
 
 
 ## Infrastructure

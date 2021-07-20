@@ -30,6 +30,5 @@ core service for data management
 
 
 ## Noted link
-- http://localhost:8080/swagger-ui/ 
 - http://localhost:7001/swagger-ui/
 - http://localhost:8080/auth 

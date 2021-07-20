@@ -52,11 +52,11 @@ echo "PORT=${PORT}"
 
 
 # Verify that a 404 (Not Found) error is returned for a non existing accountId (13)
-assertCurl 404 "curl http://$HOST:$PORT/account/13 -s"
+assertCurl 404 "curl http://$HOST:$PORT/view/13 -s"
 
 
 # Verify that a 422 (Unprocessable Entity) error is returned for a accountId that is out of range (-1)
-assertCurl 422 "curl http://$HOST:$PORT/account/-1 -s"
+assertCurl 422 "curl http://$HOST:$PORT/view/-1 -s"
 
 
 

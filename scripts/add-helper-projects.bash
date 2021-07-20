@@ -9,8 +9,8 @@ spring init \
 --java-version=1.8 \
 --packaging=jar \
 --name=util \
---package-name=com.ari.finance.util \
---groupId=com.ari.finance.util \
+--package-name=com.marvin.share.util \
+--groupId=com.marvin.share.util \
 --dependencies=webflux \
 --version=1.0.0-SNAPSHOT \
 util
@@ -21,8 +21,8 @@ spring init \
 --java-version=1.8 \
 --packaging=jar \
 --name=api \
---package-name=com.ari.finance.api \
---groupId=com.ari.finance.api \
+--package-name=com.marvin.share.api \
+--groupId=com.marvin.share.api \
 --dependencies=webflux \
 --version=1.0.0-SNAPSHOT \
 api

@@ -21,13 +21,13 @@ public class View
 
     private String userId;
 
-    /*
+
     Set<DataSource> dataSources = new HashSet<>();
 
     Set<Category> categories = new HashSet<>();
 
     Set<Tag> tags = new HashSet<>();
-     */
+
 
 
 }
