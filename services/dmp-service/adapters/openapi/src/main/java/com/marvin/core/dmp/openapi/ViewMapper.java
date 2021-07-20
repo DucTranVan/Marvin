@@ -11,7 +11,7 @@ import org.mapstruct.Mappings;
 public interface ViewMapper {
 
     @Mappings({
-        @Mapping(target = "serviceAddress", ignore = true)
+        @Mapping(target = "serviceAddress", ignore = true),
     })
     ViewDto entityToApi(View entity);
 

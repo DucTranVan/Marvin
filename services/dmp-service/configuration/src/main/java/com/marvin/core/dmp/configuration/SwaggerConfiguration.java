@@ -1,4 +1,4 @@
-package com.marvin.core.account.configuration;
+package com.marvin.core.dmp.configuration;
 
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;

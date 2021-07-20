@@ -1,4 +1,4 @@
-package com.marvin.core.account.configuration;
+package com.marvin.core.dmp.configuration;
 
 import com.marvin.core.dmp.application.port.in.ViewQuery;
 import com.marvin.core.dmp.application.port.out.ViewRepository;

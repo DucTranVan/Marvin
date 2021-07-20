@@ -17,7 +17,7 @@ api:
       notes: |
         # Normal response
         If the requested  id is found the method will return information regarding:
-        1. Account detail information
+        1. View detail information
         1. List of Users that own the view
         1. List of Categories that is tailored for the view.
         1. Service Addresses (technical information regarding the addresses of the microservices that created the response)
@@ -53,7 +53,7 @@ server.error.include-message: always
 spring.data.mongodb:
   host: localhost
   port: 27017
-  database: account-db
+  database: view-db
 
 logging:
   level:
